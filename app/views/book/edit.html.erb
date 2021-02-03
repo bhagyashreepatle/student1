@@ -1,0 +1,35 @@
+
+<%= link_to "Back to List ", controller: "book", action: 'list',class: "back-link"  %>
+
+<div class ="Book Edit">
+	<h2> Edit Book</h2>
+
+	<%= form_for(:books, url: {action: 'update', id: @book.id}) do |t| %>
+
+	  <table summary="Topic form fields">
+  
+		<tr>
+			<th> Book Name </th>
+			<td> <%= t.text_field(:bname)  %></td>
+		</tr>
+		
+		<tr>
+			<th> Author </th>
+			<td> <%= t.text_field(:author)  %></td>
+		</tr>
+
+		<tr>
+			<th> Price </th>
+			<td> <%= t.text_field(:price)  %></td>
+		</tr>
+		
+		
+	</table>
+	<div class = "form-button">
+		<%= submit_tag("Update Book") %>
+	</div>
+	<% end %>
+
+
+
+

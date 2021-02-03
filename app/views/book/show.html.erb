@@ -1,0 +1,15 @@
+
+<head>
+	
+	<link href="style.css" rel="stylesheet">
+</head>
+
+<h1><%= @book.bname %></h1>
+<p>
+	<strong>Price : </strong>$<%= @book.price %><br />
+	<strong>Author : </strong>$<%= @book.author %><br />
+	<strong>Created date : </strong>$<%= @book.created_at  %><br />
+
+</p>
+<hr />
+<%= link_to 'Back',{:action =>'list'}%>

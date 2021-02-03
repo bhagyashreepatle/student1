@@ -1,0 +1,13 @@
+<div class="Book Delete">
+
+ <h2>delete book</h2>
+<%= form_for(:books,url:{action:'destroy',id:@book.id}) do |t|%>
+<p>are you sure want to delete this permanently</p>
+<p class ="reference.name"> <%= @book.bname %></p>
+<div class="form-button">
+	<%= submit_tag("delete book")%>
+</div>
+ 
+<% end %>
+
+</div>

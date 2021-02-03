@@ -1,0 +1,48 @@
+
+<head>
+  
+  <link href="style.css" rel="stylesheet"
+</head>
+<% @book_title="Book"%>
+<%= link_to "Back to home",controller:"first",action:'welcome',class: "back_link"%>
+
+<div class="Book Index">
+
+    <h1>Book list</h1>
+ 
+    <%= link_to "Add new book",controller:'book',action:'new', class: "action new"%>
+    <br>
+    <br>
+    <table class="listing" summury="book list" style="width: 50%" >
+      <tr class="header">
+        <th>Name</th>
+        <th>Action</th>
+      </tr>
+        <tr>
+            
+        </tr>
+
+      <% @book.each do |b| %>
+           <tr>
+               <td> <%= b.bname %></td>
+               <td class = "actions">
+
+                   <%= link_to "show", action:'show', id:b.id, class:"action show"%>
+                   <%= link_to "edit", action:'edit', id:b.id, class:"action edit"%>
+                   <%= link_to "delete", action:'delete', id:b.id, class:"action delete"%>
+               </td>
+
+
+           </tr>
+        
+        <% end %>
+
+
+
+
+
+
+
+
+    </table>
+    </div>
